@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
-    <h1>Herzlich Wilkommen</h1>
+    <h1>Herzlich Willkommen</h1>
 <body>
     <div>Aktiensymbol</div>
+    <div>
+		<input id="aktiensymbol" name="aktiensymbol" type="text">
+	</div>
     <div>Anzahl Aktien</div>
+    <div>
+		<input id="anzahl" name="anzahl" type="number" step="1" min="0">
+		<!-- step = 1 damit nur ganze Aktien (int) eingetragen werden können -->
+	</div>
     <div>Preis</div>
+    <div>
+		<input id="preis" name="preis" type="number" step="0.01" min="0">
+		<!-- step = 0.01 damit auch float Nummern eingetragen werden können -->
+	</div>
     <button type="fertig" class="btn btn-primary">Fertig</button>
 </body>
 </html>
