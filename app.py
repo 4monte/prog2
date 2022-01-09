@@ -13,17 +13,24 @@ def Index():
         aktiensymbol = request.form["aktiensymbol"]
         anzahl = request.form["anzahl"]
         preis = request.form["preis"]
-        usereingabe = yf.Ticker(aktiensymbol)
-        marktpreis = usereingabe.info["regularMarketPrice"]
-        ausgabe = {
-            "aktiensymbol" : aktiensymbol,
-            "preis" : preis
-            "marktpreis" : marktpreis,
-            "anzahl" : anzahl,
-            "gewinn" : anzahl * float(marktpreis-preis)
-        }
 
-        return render_template("index.html")
+        try:
+            usereingabe = yf.Ticker(aktiensymbol)
+            marktpreis = usereingabe.info["regularMarketPrice"]
+
+            ausgabe = {
+                "aktiensymbol" : aktiensymbol,
+                "preis" : preis
+                "marktpreis" : marktpreis,
+                "anzahl" : anzahl,
+                "gewinn" : anzahl * float(marktpreis-preis)
+            }
+            return render_template("index.html", ausgabe=ausgabe)
+        except:
+            error= f"{aktiensymbol} ist ungültig!"
+            return render_template('index.html', error=error)
+    else:
+        return render_template('index.html')
 
 
 if __name__ == "__main__":
