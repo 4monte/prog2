@@ -8,15 +8,33 @@
 
 </head>
 <body>
-<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-		<li class = "platzhalter">
 
+<nav class="container navbar navbar-expand">
+  <div class="row navbar-collapse collapse justify-content-between" id="navbarText">
+      <div class="col-6">
+          Alessio
+      </div>
+      <div class="col-6 d-flex justify-content-end">
+              <ul class="navbar-nav ml-auto">
+      {% if current_user.is_authenticated %}
+         <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('Logout') }}">Logout</a>
         </li>
-	</ul>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('Login') }}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('Register') }}">Registrieren</a>
+        </li>
+      {% endif %}
+
+    </ul>
+      </div>
+
   </div>
-</nav>-->
+</nav>
+
 <div class='main-container'>
 
 
@@ -32,7 +50,6 @@
         {% endblock %}
     </div>
 </div>
-
 
 <script crossorigin="anonymous"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
