@@ -40,6 +40,10 @@ Flask-Login Dokumentation: https://flask-login.readthedocs.io/en/latest/
 
 Flask-SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/
 
+SQLAlchemy: https://docs.sqlalchemy.org/en/13/orm/session_basics.html
+
 Jinja2: https://jinja.palletsprojects.com/en/3.0.x/, https://jinja2docs.readthedocs.io/en/stable/
+
+Werkzeug.security: https://werkzeug.palletsprojects.com/en/2.0.x/utils/?highlight=werkzeug.security#module-werkzeug.security
 
 graphJSON: https://www.graphjson.com/

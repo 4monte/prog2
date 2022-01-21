@@ -1,70 +1,67 @@
 body {
-	background-image: url("bg.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-    position: relative;
-    }
-.main-svg {
-    background: none!important;
+     background-image: url("bg.jpg");
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     position: relative;
 }
-.aktiensymbol--text {
-text-transform: uppercase;
+ .main-svg {
+     background: none!important;
 }
-.main-svg text {
-color: white!important;
-fill: white!important;
+ .aktiensymbol--text {
+     text-transform: uppercase;
 }
-
-.modebar-container {
- display: none;
+ .main-svg text {
+     color: white!important;
+     fill: white!important;
 }
-.input-label, th, li, td, p, tr, label {
-    color: white;
-    font-size: 21px;
-    margin-bottom: 0!important;
+ .modebar-container {
+     display: none;
 }
-body::after {
-content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+ .input-label, th, li, td, p, tr, label {
+     color: white;
+     font-size: 21px;
+     margin-bottom: 0!important;
 }
-.table tbody {
-    border-top: white!important;
+ body::after {
+     content: "";
+     position: absolute;
+     right: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index: -1;
 }
-.main-container {
-	width: 100%;
-	min-height: 100vh;
+ .table tbody {
+     border-top: white!important;
 }
-
-.main-content {
-	width: 600px;
-	margin: 0 auto;
-	padding: 50px 0 0 0;
+ .main-container {
+     width: 100%;
+     min-height: 100vh;
 }
-
-.form-group {
-margin-bottom: 1rem;
+ .main-content {
+     width: 600px;
+     margin: 0 auto;
+     padding: 50px 0 0 0;
 }
-
-.result-container {
-	width: 100%;
-	margin: 50px 0 0 0;
+ .form-group {
+     margin-bottom: 1rem;
 }
-
-.input-label {
-    margin-bottom: 6px;
-    margin-top: 16px;
+ .result-container {
+     width: 100%;
+     margin: 50px 0 0 0;
 }
-
-a.nav-link {
-color: white;
+ .input-label {
+     margin-bottom: 6px;
+     margin-top: 16px;
 }
-a.nav-link:hover {
-color:white;
-opacity: 0.7!important;
+ a.nav-link {
+     color: white;
+}
+ a.nav-link:hover {
+     color:white;
+     opacity: 0.7!important;
+}
+ p {
+     font-size: 30px;
 }
