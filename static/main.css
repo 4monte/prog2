@@ -4,11 +4,25 @@ body {
 	background-attachment: fixed;
     position: relative;
     }
+.main-svg {
+    background: none!important;
+}
+.aktiensymbol--text {
+text-transform: uppercase;
+}
+.main-svg text {
+color: white!important;
+fill: white!important;
+}
 
-    * {
-        color: white;
-        font-size: 21px;
-    }
+.modebar-container {
+ display: none;
+}
+.input-label, th, li, td, p, tr, label {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 0!important;
+}
 body::after {
 content: "";
     position: absolute;
@@ -18,6 +32,9 @@ content: "";
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
+}
+.table tbody {
+    border-top: white!important;
 }
 .main-container {
 	width: 100%;

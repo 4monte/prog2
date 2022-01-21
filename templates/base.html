@@ -12,7 +12,7 @@
 <nav class="container navbar navbar-expand">
   <div class="row navbar-collapse collapse justify-content-between" id="navbarText">
       <div class="col-6">
-          Alessio
+          <p>Aktienportfolio Web App</p>
       </div>
       <div class="col-6 d-flex justify-content-end">
               <ul class="navbar-nav ml-auto">
@@ -44,10 +44,15 @@
     </div>
     {% endif %}
 
-    <div class='main-content'>
+    <div class='container'>
 
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
         {% block content %}
         {% endblock %}
+            </div>
+        </div>
+
     </div>
 </div>
 

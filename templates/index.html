@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="mb-5">
 
 <form action="/" method='POST'>
     <div class="input-label">Aktiensymbol</div>
@@ -20,9 +21,12 @@
         <button class="btn btn-primary px-4 py-2 bg-" type="submit">Fertig</button>
     </div>
 </form>
+    </div>
+
 {% if graph_ready %}
-<div class="result-container">
-    <div class="panel panel default">
+
+
+    <div class="panel panel default mb-4">
         <table class="table">
             <thead>
             <tr>
@@ -35,16 +39,16 @@
             </thead>
             <tbody>
             <tr>
-                <td>{{ result.aktiensymbol }}</td>
+                <td class="aktiensymbol--text">{{ result.aktiensymbol }}</td>
                 <td>{{ result.preis }}</td>
                 <td>{{ result.marktpreis }}</td>
                 <td>{{ result.anzahl }}</td>
                 <td>{{ result.gewinn }}</td>
             </tr>
             </tbody>
-    </div>
     </table>
-</div>
+              </div>
+
 <div class='chart' id='chart' ”></div>
 <!-- Durch Skript ist Plotly in html implementierbar -->
 <!-- Quelle:  -->
@@ -52,9 +56,7 @@
 <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 <script type='text/javascript'>
 	  var graphs = {{graphJSON | safe}};
-	  Plotly.newPlot('chart',graphs);
-
-
+	  Plotly.plot('chart',graphs);
 </script>
 {% endif %}
 </body>

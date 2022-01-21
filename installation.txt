@@ -1,0 +1,21 @@
+# Packages installieren
+
+1) cd zu Ordner im Terminal (wo requirements.txt drin ist)
+2) Alle Packages installieren: pip install -r requirements.txt
+3) cd zu Ordner und folgendes eintippen: flask run (startet die Webapp)
+
+# Falls die Bibliotheken nicht installiert werden, können diese auch von Hand installiert werden
+# Pycharm Tutorial:
+
+1) Unter Pycharm -> Preferences -> Project: -> Python Interpreter -> + -> Package eingeben und installieren
+
+# Migration der Datenbank
+
+1) cd zu Ordner im Terminal
+2) Folgendes eintippen: python
+3) Warten bis python shell sich öffnet
+4) Folgendes eintippen: from app import db
+5) Warten auf Antwort
+6) Folgendes eintippen: db.create_all()
+
+# Die Datenbank ist nun migriert

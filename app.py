@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, url_for, redirect
 
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import login_required, login_user, current_user, LoginManager, logout_user
+from flask_login import login_required, login_user, LoginManager, logout_user
 
 from flask_login import UserMixin
 
@@ -58,6 +58,7 @@ def Index():
                               "Open": "Marktpreis",
                           },
                           title=f'{unternehmen}\'s Preis in den letzten 7 Tagen')
+            fig.update_layout(plot_bgcolor="rgba(255,255,255,0)")
 
             graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
@@ -71,7 +72,7 @@ def Index():
             }
 
             return render_template("index.html", result=result, graph_ready=True, graphJSON=graphJSON)
-        except:
+        except Exception as e:
             # Fehlermeldung kommt falls jemand ein Aktiensymbol eingibt, welches nicht von yfinance unterstützt wird
             error = f"{aktiensymbol} ist ungültig! Bitte geben Sie ein anderes Aktiensymbol ein."
             return render_template('index.html', error=error)
